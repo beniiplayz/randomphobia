@@ -1,0 +1,33 @@
+{
+  "name": "randomphobia",
+  "version": "0.1.0",
+  "description": "An Item Randomizer for players of the widely popular Phasmophobia, using the Next.js framework.",
+  "keywords": [
+    "phasmophobia",
+    "item",
+    "randomizer",
+    "user-friendly",
+    "assistant"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "beniiplayz",
+    "email": "info@beniiplayz.hu",
+    "url": "https://www.beniiplayz.hu"
+  },
+  "files": ["pages/", "components/", "public/", "styles/"],
+  "main": "pages/index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.5"
+  },
+  "private": true
+}
+
