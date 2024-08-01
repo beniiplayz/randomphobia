@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Item from '../components/Item';
 
+// List of item names
 const itemNames = [
   'Crucifix',
   'D.O.T.S. Projector',
@@ -23,15 +24,20 @@ const itemNames = [
   'Video Camera'
 ];
 
+// Creates an array of items and paths to their corresponding tier images
 const items = itemNames.map(name => ({
   name,
   tiers: [1, 2, 3].map(tier => `/images/${name.toLowerCase().replace(/ /g, '_')}/t${tier}.webp`)
 }));
 
+// Home component definition
 export default function Home() {
+  // State to keep track of randomized items
   const [randomizedItems, setRandomizedItems] = useState(items.map(item => ({ ...item, randomizationResult: null })));
+  // State to control whether arrows are disabled
   const [disableArrows, setDisableArrows] = useState(false);
 
+  // Function to randomize the tiers of items
   const randomizeTiers = () => {
     setRandomizedItems(randomizedItems.map(item => ({
       ...item,
@@ -41,8 +47,11 @@ export default function Home() {
 
   return (
     <div>
-      <h1>RandomPhobia | V0.1.11</h1>
+      {/* Page title */}
+      <h1>RandomPhobia | V0.1.12</h1>
+      {/* Button to trigger randomization */}
       <button onClick={randomizeTiers}>Let's Randomize!</button>
+      {/* Checkbox to toggle arrow visibility */}
       <label>
         <input
           type="checkbox"
@@ -51,6 +60,7 @@ export default function Home() {
         />
         Disable Arrows
       </label>
+      {/* Container for item components */}
       <div className="items-container">
         {randomizedItems.map(item => (
           <Item key={item.name} item={item} disableArrows={disableArrows} />

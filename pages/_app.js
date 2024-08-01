@@ -1,7 +1,9 @@
 import '../styles/globals.css';
 
-function PhasmoRandomizer({ Component, pageProps }) {
+// Main application component for the RandomPhobia app
+function RandomPhobia({ Component, pageProps }) {
+  // Render the current page component with its props
   return <Component {...pageProps} />;
 }
 
-export default PhasmoRandomizer;
+export default RandomPhobia;

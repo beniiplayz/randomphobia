@@ -1,26 +1,32 @@
+/* Center align the main heading */
 h1 {
   text-align: center;
 }
 
+/* Ensure buttons and labels are displayed as block elements */
 button, label {
   display: block;
 }
 
+/* Center the button and add bottom margin */
 button {
   margin: auto;
   margin-bottom: 20px;
 }
 
+/* Center align the label text */
 label {
   text-align: center;
 }
 
+/* Container for items, using flexbox to wrap and evenly space items */
 .items-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
+/* Style for individual item containers */
 .item {
   margin: 10px;
   text-align: center;
@@ -29,6 +35,7 @@ label {
   min-width: max-content;
 }
 
+/* Container for tier images, centered using flexbox */
 .tiers {
   position: relative;
   display: flex;
@@ -36,16 +43,19 @@ label {
   justify-content: center;
 }
 
+/* Style for tier images, with a pointer cursor */
 .tiers img {
   width: 200px;
   height: 200px;
   cursor: pointer;
 }
 
+/* Style for the selected tier image, adding a border */
 .tiers img.selected {
   border: 3px solid #000;
 }
 
+/* Style for arrow elements, positioned and styled for user interaction */
 .arrow {
   position: relative;
   top: 50%;
@@ -55,14 +65,17 @@ label {
   z-index: 1;
 }
 
+/* Additional positioning for left arrow */
 .arrow.left {
   left: 3px;
 }
 
+/* Additional positioning for right arrow */
 .arrow.right {
   right: 3px;
 }
 
+/* Style for the result message, with margin and bold font */
 .result-message {
   margin-top: 10px;
   font-size: 16px;
