@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>RandomPhobia | V0.1.0</h1>
+      <h1>RandomPhobia | V0.1.1</h1>
       <button onClick={randomizeTiers}>Let's Randomize!</button>
       <label>
         <input
