@@ -52,14 +52,15 @@ export default function Home() {
       {/* Button to trigger randomization */}
       <button onClick={randomizeTiers}>Let's Randomize!</button>
       {/* Checkbox to toggle arrow visibility */}
-      <label>
-        <input
+      <input
           type="checkbox"
           checked={disableArrows}
           onChange={() => setDisableArrows(!disableArrows)}
-        />
-        Disable Arrows
-      </label>
+          id="toggle" 
+          class="checkbox"
+      />
+      <label for="toggle" class="switch"></label>
+      <p>Disable arrows</p>
       {/* Container for item components */}
       <div className="items-container">
         {randomizedItems.map(item => (
