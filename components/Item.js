@@ -4,10 +4,10 @@ export default function Item({ item, disableArrows }) {
   const [selectedTier, setSelectedTier] = useState(0);
 
   useEffect(() => {
-    if (item.currentTier !== null) {
-      setSelectedTier(item.currentTier);
+    if (item.randomizationResult !== null) {
+      setSelectedTier(item.randomizationResult);
     }
-  }, [item.currentTier]);
+  }, [item.randomizationResult]);
 
   const handleNext = () => {
     setSelectedTier((prevTier) => (prevTier + 1) % 3);
@@ -29,8 +29,8 @@ export default function Item({ item, disableArrows }) {
         />
         {!disableArrows && <span className="arrow right" onClick={handleNext}>&#9654;</span>}
       </div>
-      {item.currentTier !== null && (
-        <p className="selected-tier">Current tier: {item.currentTier + 1}</p>
+      {item.randomizationResult !== null && (
+        <p className="result-message">You have to take the tier {item.randomizationResult + 1},<br></br> don't cheat!</p>
       )}
     </div>
   );

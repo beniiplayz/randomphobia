@@ -1,14 +1,32 @@
+h1 {
+  text-align: center;
+}
+
+button, label {
+  display: block;
+}
+
+button {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+label {
+  text-align: center;
+}
+
 .items-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .item {
-  margin: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
+  margin: 10px;
   text-align: center;
   position: relative;
+  flex: 1 1 auto;
+  min-width: max-content;
 }
 
 .tiers {
@@ -25,29 +43,27 @@
 }
 
 .tiers img.selected {
-  border: 2px solid #000;
+  border: 3px solid #000;
 }
 
 .arrow {
-  position: absolute;
+  position: relative;
   top: 50%;
-  transform: translateY(-50%);
   font-size: 24px;
   user-select: none;
   cursor: pointer;
   z-index: 1;
-  padding: 0 20px;
 }
 
 .arrow.left {
-  left: 0px; 
+  left: 3px;
 }
 
 .arrow.right {
-  right: 0px;
+  right: 3px;
 }
 
-.selected-tier {
+.result-message {
   margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
